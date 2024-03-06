@@ -13,6 +13,7 @@ public class Main {
         int min = 0;
         int max = 0;
         boolean foundNum = false;
+        double average = 0;
 
         for (int i = 0; i < dataPoint.length; i++){
             dataPoint[i] = rnd.nextInt(100) + 1; // range of 1-100
@@ -61,6 +62,27 @@ public class Main {
             }
         }
         System.out.println("\nThe maximum value for this array is " + max);
+
+        System.out.println("Average of dataPoints is: " + getAverage(dataPoint));
+
+
     }
+    public static double getAverage(int [] values){
+        double average = 0;
+        int total = 0;
+
+        for(int i=0; i < values.length; i++)
+
+        {
+
+            total += values[i]; //total = total + values[i]
+
+        }
+        average = (double)total / values.length;
+
+        return average;
+    }
+
 }
+
 
